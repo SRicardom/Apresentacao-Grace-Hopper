@@ -23,6 +23,14 @@ color: #0b5cff;
 }
 
 .biografia {
+   text-align: center; /* centraliza a imagem dentro do container */
+
+    
+}
+
+#foto-grace{
+    border-radius: 40px;
+    width: 120px;
     text-align: center;
 }
 
