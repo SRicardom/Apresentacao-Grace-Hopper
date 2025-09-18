@@ -1,0 +1,10 @@
+.biografia {
+    display: block;      /* necessário para margin auto funcionar */
+    margin: 50px auto;   /* centraliza horizontalmente, 50px de espaço acima/baixo */
+    width: 300px;        /* largura da imagem */
+    border-radius: 10px;
+}
+
+#frase{
+    margin: 0
+}
