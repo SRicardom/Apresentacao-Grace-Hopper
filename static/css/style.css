@@ -1,34 +1,38 @@
 body {
-margin: 0;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-background: linear-gradient(160deg, #0f172a, #020617);
-font-family: 'Inter', system-ui, sans-serif;
-color: #f8fafc;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(160deg, #0f172a, #020617);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #f8fafc;
+    padding: 40px 20px;
 }
 
 .container {
-text-align: center;
-max-width: 700px;
-width: 100%;
-padding: 20px;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
 }
 
 h1 {
-font-size: 2.2rem;
-margin-bottom: 20px;
-color: #0b5cff;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #0b5cff;
 }
 
 .biografia {
-   text-align: center; /* centraliza a imagem dentro do container */
+    text-align: center;
+    /* centraliza a imagem dentro do container */
+    text-align: center;
+    margin-bottom: 40px;
 
-    
 }
 
-#foto-grace{
+#foto-grace {
     border-radius: 40px;
     width: 120px;
     text-align: center;
@@ -36,7 +40,11 @@ color: #0b5cff;
 
 .texto {
     color: azure;
-    font-size: 20px;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: center;
 }
 
 #foto-grace {
@@ -47,6 +55,7 @@ color: #0b5cff;
 
 #texto-grace {
     font-size: 20px;
+    margin-bottom: 40px;
 }
 
 .Roleta-box {
@@ -65,19 +74,19 @@ color: #0b5cff;
 }
 
 .btn {
-padding: 12px 22px;
-border-radius: 12px;
-border: none;
-background: var(--accent);
-color: #fff;
-font-size: 1rem;
-font-weight: 700;
-cursor: pointer;
-transition: 0.3s;
+    padding: 12px 22px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn:hover {
-background: #2563eb;
+    background: #2563eb;
 }
 
 footer {
