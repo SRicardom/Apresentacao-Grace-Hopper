@@ -4,7 +4,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import random
 
-topicos = ["Topico 1", "Topico 2", "Topico 3","Topico 4"]
+topicos = ["Topico1", "Topico2", "Topico3","Topico4"]
 
 app = FastAPI()
 
