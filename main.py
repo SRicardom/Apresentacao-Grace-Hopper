@@ -4,6 +4,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import random
 
+topicos = ["Topico 1", "Topico 2", "Topico 3","Topico 4"]
 
 app = FastAPI()
 
@@ -14,11 +15,14 @@ template = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
     
-    def randomizar_topico():
-        pass
-
-
     return template.TemplateResponse(
-        "introducao.html",
+        "home.html",
         {"request": request, "nome": "Maurino"}
     )
+
+@app.get("/topicos")
+def get_topico():
+    
+    topico = random.choice(topicos)
+
+    return {"topico": topico}
