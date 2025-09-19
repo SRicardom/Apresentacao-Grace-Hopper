@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARPA</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <div class="informacao">
+
+        <h2>Grace Hopper</h2>
+        <img id="foto-grace" src="../static/images/graceWhooper.png" alt="imagem de graceWhooper">
+        <ul>
+            <li><strong>Nome:</strong> Grace Hopper</li>
+            <li id="tempo"><strong>Tempo de vida:</strong> 09/12/1906 - 01/01/1992</li>
+            <li id="servico"><strong>Serviço:</strong> Marinha dos Estados Unidos (1943 - 1986)</li>
+            <li>Alma mater Vassar College
+                Universidade Yale</li>
+            <li>Condecorações Medalha de Serviço Distinto de Defesa
+                Legião do Mérito
+                e outras</li>
+        </ul>
+    </div>
+
+    <div class="biografia">
+        <h1 id="titulo-biografia" class="titulo">Biografia</h1>
+        <p id="texto">
+            Antes de ingressar na Marinha, Grace Hopper conquistou o Ph.D. em Matemática pela <strong>Universidade de
+                Yale</strong> e foi professora na Faculdade Vassar. Durante a <strong>Segunda Guerra Mundial</strong>,
+            tentou entrar na Marinha, mas foi rejeitada por causa da idade — tinha 34 anos. Como alternativa, ingressou
+            na Navy Reserves (em tradução livre, Reserva da Marinha). Em 1944, iniciou sua carreira em computação,
+            trabalhando no <strong>Mark I de Harvard</strong>, no time liderado por <strong>Howard H. Aiken</strong>.
+            Nesse período, foi coautora de três artigos científicos baseados nesse projeto. Em 1949, passou a integrar a
+            <strong>Eckert-Mauchly Computer Corporation</strong> e participou do desenvolvimento do <strong>UNIVAC
+                I</strong>, o primeiro computador comercial dos Estados Unidos. Durante esse tempo, começou também a
+            desenvolver o seu compilador, um programa capaz de converter instruções em inglês para código de máquina. Em
+            1952, concluiu o desenvolvimento do <strong>A-0 System</strong>, considerado o primeiro ligador (linker),
+            originalmente chamado de compilador. Embora não tenha participado diretamente da criação da linguagem COBOL,
+            Hopper integrou um subcomitê originado do Comitê de Curto Prazo, formado em uma reunião no Pentágono em maio
+            de 1959. Esse grupo foi responsável por elaborar as especificações da linguagem e era composto por William
+            Selden e Gertrude Tierney (IBM), Howard Bromberg e Howard Discount (RCA), além de Vernon Reeves e Jean E.
+        </p>
+    </div>
+
+    <div class="objetivo">
+        <h1 class="titulo">Objetivo</h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta doloribus aliquid ducimus ipsam assumenda
+        aspernatur odit natus. Omnis tenetur sed nisi quae. Maiores sunt omnis nemo consectetur accusamus qui. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus praesentium ut labore itaque sit vitae
+        excepturi atque quae molestias, ea accusamus fuga aliquam nemo similique facere, facilis, quis porro.
+        Dolorem doloremque ipsam reprehenderit obcaecati labore voluptate quo, odit mollitia quos dignissimos distinctio
+        amet neque. Enim nisi, dolorum provident possimus doloremque tempora dolores officiis necessitatibus ipsum
+        laborum id incidunt nostrum?
+    </div>
+
+    <div class="sorteio">
+    <h2>Sorteio de Topico</h2>
+    <p id="nome-aleatorio">Clique em "Girar" para sortear um nome</p>
+</div>
+
+<div class="botao-container">
+    <button id="botao-sorteio">Girar</button>
+</div>
+
+<script>
+document.getElementById("botao-sorteio").addEventListener("click", async () => {
+    const nomeDisplay = document.getElementById("nome-aleatorio");
+
+    try {
+        // Substitua pela URL real da sua API
+        const response = await fetch("http://127.0.0.1:8000/topicos");
+        if (!response.ok) throw new Error("Erro na requisição");
+
+        const data = await response.json();
+        nomeDisplay.textContent = data.topico || "Nenhum nome encontrado";
+    } catch (error) {
+        console.error(error);
+        nomeDisplay.textContent = "Erro ao buscar nome";
+    }
+});
+</script>
+
+</body>
+
+</html>
