@@ -1,74 +1,106 @@
-body{
+/* Corpo da página */
+body {
     background-color: azure;
-}
-ul{
-    list-style: none;
-}
-.informacao{
-    position: relative;
-    width: 200px;
-    height: 800px;
-    border: 1px solid #ccc;
-    font-size: clamp(12px, 2vw, 20px); 
-    overflow-wrap: break-word; 
-    left: 40px;
-    top: 30px;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 22px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.informacao ul {
+/* Lista sem marcadores */
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Informações da Grace Hopper */
+.informacao {
+    width: 90%;
+    height: 700px;
+    max-width: 250px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    font-size: clamp(12px, 2vw, 20px);
+    overflow-wrap: break-word;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.informacao h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.informacao img {
+    display: block;
+    width: 180px;
+    border-radius: 12px;
+    margin: 0 auto 10px auto;
+}
+
 .informacao li {
-    display: flex;                /* organiza campo e valor lado a lado */
-    justify-content: space-between; /* campo à esquerda, valor à direita */
+    display: flex;
+    justify-content: space-between;
     padding: 6px 0;
 }
 
-
-.biografia{
-    width: 1100px;
-    height: 400px;
-    border: 1px solid #ccc;
-    font-size: clamp(12px, 2vw, 20px); 
-    overflow-wrap: break-word;
-    position: relative;
-    top:-770px;
-    left: 300px;
+/* Tempo de vida e serviço em coluna */
+#tempo, #servico {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 0;
 }
 
-.titulo{
-   position: relative;
-   left: 65px;
+#tempo span, #servico span {
+    margin-top: 2px;
+    font-weight: normal;
 }
 
-
-.objetivo{
-    width: 1100px;
-    height: 250px;
-    border: 1px solid #ccc;
-    font-size: clamp(12px, 2vw, 20px); 
-    overflow-wrap: break-word;
-    position: relative;
-    top: -760px;
-    left: 300px;
-}
-
-.sorteio {
+/* Blocos principais (Biografia e Objetivo) */
+.biografia {
     width: 90%;
-    max-width: 400px;
-    margin: 20px auto 10px auto; /* margem inferior menor */
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    font-size: clamp(12px, 2vw, 20px);
+    overflow-wrap: break-word;
+    margin-top: -750px;
+    margin-left: 350px;
+}
+.objetivo{
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    font-size: clamp(12px, 2vw, 20px);
+    overflow-wrap: break-word;
+    margin-top: -10px;
+    margin-left: 350px;
+}
+
+/* Títulos internos */
+.titulo {
+    margin-bottom: 15px;
+    font-size: clamp(18px, 2.2vw, 28px);
+}
+
+/* Sorteio */
+.sorteio {
+    width: 700px;
+    margin: 20px auto 10px auto;
     padding: 20px;
     border-radius: 12px;
     background: linear-gradient(135deg, #f5f5f5, #eaeaea);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
-    font-family: Arial, sans-serif;
+    margin-top: 100px;
 }
 
 .sorteio h2 {
@@ -80,12 +112,13 @@ ul{
     margin: 15px 0;
     font-size: clamp(14px, 1.5vw, 20px);
     font-weight: bold;
-    min-height: 24px; /* evita pular o layout */
+    min-height: 24px;
 }
 
+/* Botão de sorteio */
 .botao-container {
-    text-align: center; /* centraliza o botão fora da roleta */
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 10px auto 40px auto;
 }
 
 #botao-sorteio {
@@ -96,65 +129,15 @@ ul{
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #botao-sorteio:hover {
     background-color: #45a049;
 }
 
-#nome-aleatorio {
-    margin: 15px 0;
-    font-size: clamp(14px, 1.5vw, 20px);
-    font-weight: bold;
-    min-height: 24px; /* evita pular o layout ao carregar o nome */
-}
-
-#botao-sorteio {
-    padding: 10px 20px;
-    font-size: clamp(14px, 1.5vw, 18px);
-    border: none;
-    border-radius: 8px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-}
-
-#botao-sorteio:hover {
-    background-color: #45a049;
-}
-
-
-
-#foto-grace{
-    width: 180px;
-    border-radius: 12px;
-}
-
-#tempo {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    padding: 6px 0;
-}
-
-#tempo span {
-    margin-top: 2px;
-    font-weight: normal;
-}
-
-#servico{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 6px 0;
-}
-
-#servico span{
-    margin-top: 2px;
-    font-weight: normal;
-}
-
-#botao{
+/* Botão azul usado em outras partes */
+#botao {
     padding: 12px 22px;
     border-radius: 12px;
     border: none;
@@ -167,4 +150,10 @@ ul{
 
 #botao:hover {
     background: #0051ff;
+}
+
+/* Nome grande */
+#nome {
+    font-size: x-large;
+    text-align: center;
 }
